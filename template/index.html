@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% for p in posts %}
+<section>
+    <h3 class="post-title">{{ p.titulo }}</h3>
+
+	<p class="date">Publicado en: {{ p.fecha.strftime('%m/%d/%Y') }}</p>
+	<p>{{ p.texto }}</p>
+</section>
+{% endfor %}
+{% endblock %}
